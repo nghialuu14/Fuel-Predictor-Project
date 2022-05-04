@@ -1,0 +1,1 @@
+psql postgres://oapcxsts:cNHeVmY_a-9jZ9VhWzxJ-pNGNWOqZ31Y@hansken.db.elephantsql.com/oapcxsts

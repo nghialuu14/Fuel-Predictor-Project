@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS usercredentials CASCADE;
+CREATE TABLE usercredentials(
+ username VARCHAR(30) PRIMARY KEY REFERENCES clientinformation(username),
+ password text NOT NULL
+);
+
+DROP TABLE IF EXISTS clientinformation CASCADE;
+CREATE TABLE clientinformation(
+ username VARCHAR(30) PRIMARY KEY,
+ fullname VARCHAR(50) NOT NULL,
+ address1 VARCHAR(100) NOT NULL,
+ address2 VARCHAR(100),
+ city VARCHAR(100) NOT NULL,
+ state VARCHAR(2) NOT NULL,
+ zipcode VARCHAR(9) NOT NULL
+);
+
+DROP TABLE IF EXISTS fuelquote CASCADE;
+CREATE TABLE fuelquote(
+ id INT PRIMARY KEY,
+ username VARCHAR (30),
+ galreqs INT NOT NULL,
+ deladdr VARCHAR (100) NOT NULL,
+ deldate VARCHAR (20) NOT NULL,
+ price FLOAT NOT NULL,
+ total FLOAT NOT NULL
+);

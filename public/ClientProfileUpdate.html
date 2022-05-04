@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <h1>Client Profile</h1>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuel Rate Predictor - Profile Form</title>
+        <script src="validations.js"></script>
+        <script src="profile.js"></script>
+    </header>
+    <body>
+        
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+              <a href="menu.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+              <a id="menu-clientprofile" href="ClientProfile.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Client Profile</a>
+              <a id="menu-fuelquoteform" href="FuelQuoteForm.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote Form</a>
+              <a id="menu-fuelquotehistory" href="FuelQuoteHistory.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote History</a>
+              <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <a href="#" class="w3-bar-item w3-button">About us</a>
+                  <a href="#" class="w3-bar-item w3-button">Join us</a>
+                  <a href="https://github.com/dat3ngy/FuelPredictor" class="w3-bar-item w3-button">Media</a>
+                </div>
+              </div>
+              <a id='logout' href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">LOG OUT</a>
+              <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+        <form>
+            <div class="boardbackground w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+                <h2 class="w3-wide w3-left">Hello <span style="font-style: italic" id="hello-user"></span>,</h2>
+                <br><br><br>
+                <p class="w3-opacity"><i>Please update your profile</i></p>
+                <div>
+                    <label for="fullname" style="font-weight:bolder">Full Name <span style="color:red">*</span></label>
+                    <input type="text" id="fullname" name="fullname" maxlength="50" required>
+                </div> 
+                <br>
+                <div>
+                    <label for="address1" style="font-weight:bolder">Address 1 <span style="color:red">*</span></label>
+                    <input type="text" id="address1" name="address1" maxlength="100" required>
+                </div>
+                <br>
+                <div>
+                    <label for="address2" style="font-weight:bolder; margin-left: 10px;">Address 2</label>
+                    <input type="text" id="address2" name="address2" maxlength="100" placeholder="this field is optional">
+                </div>
+                <br>
+                <div>
+                    <label for="city" style="margin-left:45px; font-weight:bolder; margin-left: 50px;" >City <span style="color:red">*</span></label>
+                    <input type="text" id="city" name="city" maxlength="100" required>
+                </div>            
+                <br>
+                <div style="margin-left:-135px">
+                    <label for="state" style="font-weight:bolder; margin-left: 10px;">State <span style="color:red">*</span> </label>
+                    <select id="state" name="state" required>
+                        <option></option><option id='AL'>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option><option>CO</option>
+                        <option>CT</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+                        <option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option>
+                        <option>ME</option><option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+                        <option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option>
+                        <option>NM</option><option>NY</option><option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+                        <option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option>
+                        <option id='TX'>TX</option><option>UT</option><option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+                        <option>WI</option><option>WY</option>
+                    </select>
+                </div>    
+                
+                <br>
+                <div style="margin-left:-115px">
+                    <label for="zipcode" style="font-weight:bolder; margin-left: 10px;">Zip code <span style="color:red">*</span></label>
+                    <input type="text" name="zipcode" id="zipcode" minlength="5" maxlength="9" size="7" required>
+                    <div id="log"></div>
+                </div>
+                <br>
+    
+                <button class="w3-button w3-black w3-section" id="update" type="button" onclick="checkZip()"> Update Profile </button>
+                <div id="updatesuccess">
+
+                </div>
+                <br>
+                <footer style="text-align: left"><a href="menu.html">Back to the main page</a></footer>
+                
+            </div>
+        </form>
+
+    </body>
+</html>

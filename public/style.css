@@ -1,0 +1,47 @@
+h1 {
+    background-image: url('assets/background.jpeg');
+    color: Black;
+    font-family: Courier;
+    text-align: center;
+    border: 5px double black;
+    padding: 30px;
+    padding-top: 50px;
+    font-style:italic;
+    font-weight:bolder;
+  }
+  
+body{
+    background-image: url('assets/blackbackground.jpg')
+}
+
+h2 {
+    color: black;
+    font-family: Time New Romans;
+    text-indent: 20px;
+    margin-bottom: 6px;
+}
+
+p {
+    font-family:Georgia;
+}
+
+.history {
+    color: Blue;
+    font-family: courier;
+    font-size: 160%;
+}
+  
+.boardbackground{
+    background-image: url('assets/background.jpeg');
+    border: 10px double black;
+}
+.style1{
+    font-family:Courier;
+    font-size:100%;
+}
+
+.style2{
+    font-family:Courier;
+    font-size:200%;
+}
+

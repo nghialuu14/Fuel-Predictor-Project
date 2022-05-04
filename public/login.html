@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src ="login.js"></script>
+        <title>Fuel Rate Predictor - Log In</title>
+    </head>
+    <body>
+        <h1>Welcome to Fuel Rate Predictor</h1>
+        
+        
+        <div class="boardbackground w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <h2 class="w3-wide w3-left">Hello, please sign in.</h2>
+            <br><br><br>
+            <div>
+                <form>
+                    <label for="user" style="font-weight:bolder">Username</label>
+                    <input type="text" id="user" name="user" required><br><br>
+                    <label for="pw" style="font-weight:bolder">Password</label>
+                    <input type="password" id="pw" name="pw" style="margin-left: 5px" required>
+                    <p class="w3-opacity"><i>Forgot your password? Click </i> <a href="ClientPwRetrieve.html"> HERE!</a></p>
+
+                    <button class="w3-button w3-black w3-section"  type="button" onclick="confirmInput()"> Log in </button>
+
+                </form>
+                <p class="w3-opacity" style="font-style:italic"><i>Don't have an account? Create one here:</i></p>
+                <button id='register' class="w3-button w3-black w3-section " type="button" onclick="document.location='ClientRegistration.html'">Register</button>
+            </div> 
+            
+          </div>
+        
+        
+    </body>
+</html>

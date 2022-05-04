@@ -1,0 +1,117 @@
+const { TestWatcher } = require('jest');
+const puppeteer = require('puppeteer')
+const login = require('./login')
+
+/*
+test('tests if username and password inputed in the gui are sent to the server', async () => {
+    const browser = await puppeteer.launch({
+        headless: false,
+    })
+    const page = await browser.newPage()
+    await page.goto('http://localhost:3000')
+    await page.click('#login')
+    await page.waitForSelector('input#user');
+    await page.click('input#user')
+    await page.type('input#user', 'nghialuu1', {delay: 100})
+    await page.waitForSelector('input#pw');
+    await page.click('input#pw')
+    await page.type('input#pw', 'Nghialuu1', {delay: 100})
+
+    //const validateElement1 = document.querySelector("#user").value;
+    //const validateElement2 = document.querySelector("#pw").value;
+    /*
+    const validateElement1 = page.document.getElementById('user').value;
+    const validateElement2 = document.getElementById('pw');
+    expect(validateElement1).toEqual('nghialuu1');
+    expect(validateElement2).toBe('Nghialuu1');
+
+
+    const spy = jest.spyOn(document, 'getElementById');
+    login(spy);
+    expect(document.getElementById).toBeCalledTimes(2);
+    
+    expect(validateElement1).toEqual('nghialuu1');
+    expect(validateElement2).toBe('Nghialuu1');
+
+    await page.waitForSelector('[type=button]');
+    await page.click('[type=button]')
+    
+    await page.waitForTimeout(1000);
+
+
+    const username = await page.$eval("#user", (input) => {
+        return input.getAttribute("value")
+    });
+
+    await page.waitForSelector('#user')
+    let element = await page.$('#user')
+    let value = await page.evaluate(el => el.textContent, element)
+    console.log(value)
+
+    let url = page.url();
+    console.log(url);
+    expect(url).toEqual('http://localhost:3000/login.html');
+    
+    await browser.close()
+})*/
+
+
+
+test('testing history.js...', () => {
+    const mock = jest.fn();
+    const spy = jest.spyOn(document, 'querySelector');
+    login(spy)
+    expect(spy).toHaveBeenCalled();
+    expect(document.querySelector).toBeCalledTimes(1);
+
+/*
+    const mDataHeaderPos = { top: 100 };
+    const mHeaderPos = { height: 50 };
+    const mHeader = { offsetTop: 100, getBoundingClientRect: jest.fn().mockReturnValueOnce(mHeaderPos) };
+    const mDataHeader = { getBoundingClientRect: jest.fn().mockReturnValueOnce(mDataHeaderPos) };
+    const spy = jest.spyOn(document, 'querySelector').mockImplementation((selector) => {
+        switch (selector) {
+          case 'gallonRequest':
+            return mHeader;
+          case 'dateRequest':
+            return mDataHeader;
+        }
+      });
+      
+    const spy = jest.spyOn(document, 'querySelector');
+    gallonCal(spy);
+    expect(document.querySelector).toBeCalledTimes(2);
+
+    const validateElement1 = document.getElementById('gallonRequest');
+    const validateElement2 = document.getElementById('dateRequest');
+    expect(validateElement1).toBeDefined();
+    expect(validateElement2).toBe(5);*/
+    
+    
+})
+
+
+/*
+const fakeRender = () => void 0;
+it('should test something', () => {
+    const spyFunc = jest.fn();
+    Object.defineProperty(global.document, 'querySelector', { value: spyFunc });
+    gallonCal(spyFunc);
+    expect(spyFunc).toHaveBeenCalled()
+  });
+/*
+  it('should submit job post form on save button click', () => {
+    const onPostJobSubmit = jest.fn();
+    const instance = wrapper.instance();
+    wrapper.find('form').simulate('submit', {
+      target: {
+        title: {
+          value: 'some value',
+        },
+        location: {
+          value: 'some value'
+        }
+      }
+    });
+    expect(onPostJobSubmit).toHaveBeenCalled();
+});*/

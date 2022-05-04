@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuel Rate Predictor - Fuel Quote Form</title>
+        <script src="history.js"></script>
+        <script src="printaddress.js"></script>
+        <h1>Fuel Quote Form</h1>
+    </header>
+    <body>
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+              <a href="menu.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+              <a id="menu-clientprofile" href="ClientProfile.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Client Profile</a>
+              <a id="menu-fuelquoteform" href="FuelQuoteForm.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote Form</a>
+              <a id="menu-fuelquotehistory" href="FuelQuoteHistory.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote History</a>
+              <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <a href="#" class="w3-bar-item w3-button">About us</a>
+                  <a href="#" class="w3-bar-item w3-button">Join us</a>
+                  <a href="https://github.com/dat3ngy/FuelPredictor" class="w3-bar-item w3-button">Media</a>
+                </div>
+              </div>
+              <a id='logout' href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">LOG OUT</a>
+              <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+        <div class="boardbackground w3-container w3-content w3-padding-64" style="max-width:800px" id="contact" >
+            <h2 class="w3-wide w3-center">REQUEST A FUEL QUOTE FORM</h2>
+            <p class="w3-opacity w3-center"><i>Once you fill out this form, we will be able to generate the rate of fuel based on your information.</i></p>
+            <div class="w3-row w3-padding-32">
+              <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> Houston, TX, USA<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: +00 121212<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@uh.edu<br>
+                <footer><a href="menu.html">Back to the main page</a></footer>
+              </div>
+              
+              <div class="w3-col m6">
+                <form target="_self">
+                  <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                    <div class="w3-half">
+                      <b><label class="style1" for="request">Gallon(s) Requested</label></b>
+                      <input class="w3-input w3-border" id="gallonRequest" type="number" placeholder="Number of gallons" required name="gallonRequest">
+                    </div>
+                    <div class="w3-half">
+                      <b><label class="style1" for="request"> Delivery Date</label></b>
+                      <input class="w3-input w3-border" id="dateRequest" type="date" value="2022-02-18" required>
+                        
+                    </div>
+                  </div>
+                  <p id="print-address"></p> <!--Address-->
+                  <span>Suggested Price / gallon: </span>
+                  <span id="print-price"></span>
+                  <br> <br>
+                  <!--<input class="w3-button w3-black w3-section w3-right" id="submitgallonrq" type="submit" value="CALCULATE">-->
+                 
+                  <button class="w3-button w3-black w3-section w3-right" type="button" id="calculategallonrq" onclick="calPrice()">CALCULATE</button>         
+                  <p>Total Amount Due: </p>
+                  <div id="printtotal" class="style2">
+                        $0.00
+                  </div>
+                  <div id="fuelquote"></div> 
+                  <button class="w3-button w3-black w3-section w3-right" type="button" id="submitgallonrq" onclick="gallonCal()">SUBMIT</button>
+                  <br> <br>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+             
+        
+    </body>
+</html>

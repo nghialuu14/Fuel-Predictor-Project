@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuel Rate Predictor - Fuel Quote History</title>
+        <script src="history.js"></script>
+        <h1>Fuel Quote History</h1>
+        <style>
+
+        </style>
+    </header>
+    <body>
+        <div class="w3-top">
+            <div class="w3-bar w3-black w3-card">
+              <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+              <a href="menu.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+              <a id="menu-clientprofile" href="ClientProfile.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Client Profile</a>
+              <a id="menu-fuelquoteform" href="FuelQuoteForm.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote Form</a>
+              <a id="menu-fuelquotehistory" href="FuelQuoteHistory.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Fuel Quote History</a>
+              <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <a href="#" class="w3-bar-item w3-button">About us</a>
+                  <a href="#" class="w3-bar-item w3-button">Join us</a>
+                  <a href="https://github.com/dat3ngy/FuelPredictor" class="w3-bar-item w3-button">Media</a>
+                </div>
+              </div>
+              <a id='logout' href="login.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">LOG OUT</a>
+              <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+
+        <div class="w3-center boardbackground w3-container w3-content w3-padding-64" style="max-width:800px" id="contact" >
+          <i><h2 id="hist" style="font-size: 200%; font-weight: bold; font-family: 'Merienda'">
+            There is no history to display.
+          </h2></i>
+          
+
+        </div>
+
+        <div class="w3-center boardbackground w3-container w3-content w3-padding-64" style="max-width:800px" id="contact" >
+          <footer style="font-size: 28px;font-weight: bold"><a href="menu.html">Back to the main page</a></footer>
+        </div>
+
+
+
+    </body>
+
+</html>

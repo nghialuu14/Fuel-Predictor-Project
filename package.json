@@ -1,0 +1,32 @@
+{
+  "name": "fuelpredictor",
+  "version": "1.0.0",
+  "description": "Group 33 COSC 4353 Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest --coverage --runInBand --config=jestconfig.json"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dat3ngy/FuelPredictor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dat3ngy/FuelPredictor/issues"
+  },
+  "homepage": "https://github.com/dat3ngy/FuelPredictor#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.5.2"
+  }
+}

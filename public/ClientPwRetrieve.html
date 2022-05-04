@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src ="login.js"></script>
+        <script src ="validations.js"></script>
+        <title>Fuel Rate Predictor - Log In</title>
+    </head>
+    <body>
+        <h1>Welcome to Fuel Rate Predictor</h1>
+        
+        
+        <div class="boardbackground w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+            <h2 class="w3-wide w3-left">Hello, please type in your information</h2>
+            <br><br><br><br>
+            <div>
+                <form>
+                    <label for="user" style="font-weight:bolder; margin-left: -230px">Username<span style="color:red">*</span></label>
+                    <input type="text" id="retrieve-user" name="retrieve-user" required><br><br>
+                    <label for="full" style="font-weight:bolder; margin-left: -230px">Full Name<span style="color:red">*</span></label>
+                    <input type="text" id="retrieve-fullname" name="retrieve-fullname" required><br><br>
+                    <label style="margin-left:-345px; font-weight:bolder" for="zip">Zip Code<span style="color:red;">*</span></label>
+                    <input type="text" id="retrieve-zipcode" minlength="5" maxlength="9" size="7" name="retrieve-zipcode" required><br> <br>
+
+                    <label for="pw" style="font-weight:bolder; margin-left: -40px">New Password <span style="color:red">* </span></label>
+                    <input type="password" id="retrieve-password" name="pw" style="margin-left: 5px" required> <i class="w3-opacity" style="margin-left:10px">(Capitalized, no space, at least </i>
+                        <br> <i class="w3-opacity" style="margin-left: 330px">1 special character or number, </i><br>
+                        <i style="margin-right:-260px" class="w3-opacity" style="margin-left: 10px">at least 5 characters) </i><br>
+                    <div id="pwretrieve"> 
+
+                    </div>
+                    <button class="w3-button w3-black w3-section"  type="button" onclick="pwRetrieve()"> Reset Password</button>
+                    <button class="w3-button w3-black w3-section"  type="button" onclick="document.location='login.html'"> Back to login</button>
+                </form>
+                <p class="w3-opacity" style="font-style:italic"><i>Don't have an account? Create one here:</i></p>
+                <button class="w3-button w3-black w3-section " type="button" onclick="document.location='ClientRegistration.html'">Register</button>
+            </div> 
+            
+          </div>
+        
+        
+    </body>
+</html>
